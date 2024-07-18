@@ -19,22 +19,22 @@ export default function Home() {
         <nav className="desktop__nav">
           <ul>
             <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="#" rel="noopener noreferrer">
                 Our Company
               </a>
             </li>
             <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="#" rel="noopener noreferrer">
                 Mission
               </a>
             </li>
             <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="#" rel="noopener noreferrer">
                 Careers
               </a>
             </li>
             <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="#" rel="noopener noreferrer">
                 News
               </a>
             </li>
