@@ -78,25 +78,26 @@ header {
   }
 
   nav.mobile__nav {
-    border: 1px solid green;
     position: absolute;
     top: 100%;
     right: 0;
-    transform: translateX(100%);
-    opacity: 0;
     z-index: 2;
     width: 200px;
     min-height: 200px;
     padding: 1rem;
     background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: 300ms ease-in-out;
 
     @media (min-width: 769px) {
       display: none;
     }
 
-    &__open {
-      transform: translateX(0%);
+    &.open {
+      transform: translateY(0%);
       opacity: 1;
+      visibility: visible;
     }
 
     ul {
@@ -129,7 +130,8 @@ section.hero {
   align-items: flex-start;
   flex-direction: column;
   gap: 2rem;
-  background-image: url("../../assets/oil-drilling-image.webp");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../assets/oil-drilling-image.webp");
   background-position: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -168,7 +170,7 @@ footer {
   width: 100%;
   padding: 1rem 0;
   z-index: 3;
-  margin-top: 4rem;
+  margin-top: 2rem;
 
   ul {
     list-style: none;
@@ -212,6 +214,6 @@ footer {
     font-weight: 500;
     color: #333;
     text-align: center;
-    width: min(100%, 800px);
+    width: min(70%, 800px);
   }
 }

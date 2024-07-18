@@ -54,7 +54,7 @@ export default function Home() {
           {open ? <IoMdClose /> : <RxHamburgerMenu />}
         </button>
 
-        <nav className={`mobile__nav${open ? "--open" : ""}`}>
+        <nav className={`mobile__nav ${open ? "open" : ""}`}>
           <ul>
             <li>
               <a href="#" target="_blank" rel="noopener noreferrer">
