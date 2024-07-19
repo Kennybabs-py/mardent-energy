@@ -128,6 +128,7 @@ section.hero {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  align-items: center;
   flex-direction: column;
   gap: 2rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -135,13 +136,15 @@ section.hero {
   background-position: 100%;
   background-size: cover;
   background-repeat: no-repeat;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
 
   h2 {
-    font-size: clamp(2rem, 3vw, 3.5rem);
+    font-size: clamp(2rem, 4vw, 5rem);
     font-weight: 700;
     color: #333;
     color: #fff;
-    width: min(100%, 800px);
+    width: min(90%, 1000px);
   }
   h3 {
     font-size: clamp(1.5rem, 3vw, 2.5rem);
@@ -151,7 +154,7 @@ section.hero {
   }
 
   p {
-    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-size: clamp(1rem, 4vw, 2rem);
     font-weight: 500;
     color: #333;
     color: #fff;
@@ -160,7 +163,10 @@ section.hero {
 
     span {
       font-size: inherit;
-      color: #1f4e79;
+      // color: #1070cb;
+      color: #0dbd2d;
+      font-weight: 800;
+      font-style: italic;
       // color: #fff;
     }
   }

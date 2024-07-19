@@ -6,15 +6,18 @@ import { IoMdClose } from "react-icons/io";
 
 import MardentLogo from "@/assets/mardent-energy.png";
 import "./home.scss";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
   return (
     <main>
       <header>
-        <figure>
-          <img src={MardentLogo} alt="mardent energy" />
-        </figure>
+        <Link to="/">
+          <figure>
+            <img src={MardentLogo} alt="mardent energy" />
+          </figure>
+        </Link>
 
         <nav className="desktop__nav">
           <ul>
@@ -57,22 +60,22 @@ export default function Home() {
         <nav className={`mobile__nav ${open ? "open" : ""}`}>
           <ul>
             <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="#" rel="noopener noreferrer">
                 Our Company
               </a>
             </li>
             <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="#" rel="noopener noreferrer">
                 Mission
               </a>
             </li>
             <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="#" rel="noopener noreferrer">
                 Careers
               </a>
             </li>
             <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="#" rel="noopener noreferrer">
                 News
               </a>
             </li>
