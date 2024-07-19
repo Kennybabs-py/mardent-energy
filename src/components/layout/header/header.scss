@@ -1,0 +1,115 @@
+header {
+  position: relative;
+  width: 100%;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  overflow: visible;
+
+  @media (min-width: 769px) {
+    padding: 0 3rem;
+  }
+
+  figure {
+    width: 90px;
+    height: 45px;
+
+    @media (min-width: 769px) {
+      width: 125px;
+      height: 50px;
+    }
+    img {
+      width: 90%;
+      height: 90%;
+      display: inline-block;
+      object-fit: cover;
+    }
+  }
+
+  nav.desktop__nav {
+    @media (max-width: 768px) {
+      display: none;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      list-style: none;
+      align-self: flex-end;
+    }
+
+    li {
+      list-style: none;
+      a {
+        font-size: 1rem;
+        font-weight: 500;
+        text-decoration: none;
+        color: #1f4e79;
+      }
+    }
+  }
+
+  button.mobile__nav__button {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    transition: 300ms ease-in;
+
+    @media (min-width: 769px) {
+      display: none;
+    }
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  nav.mobile__nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 2;
+    width: 200px;
+    min-height: 200px;
+    padding: 1rem;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: 300ms ease-in-out;
+
+    @media (min-width: 769px) {
+      display: none;
+    }
+
+    &.open {
+      transform: translateY(0%);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    ul {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-flow: column;
+      gap: 1rem;
+      list-style: none;
+    }
+
+    li {
+      list-style: none;
+      a {
+        font-size: 1rem;
+        font-weight: 500;
+        text-decoration: none;
+        color: #1f4e79;
+      }
+    }
+  }
+}

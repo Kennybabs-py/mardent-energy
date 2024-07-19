@@ -1,0 +1,51 @@
+footer.footer {
+  width: 100%;
+  padding: 1rem 0;
+  z-index: 3;
+  margin-top: 2rem;
+
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    li {
+      list-style: none;
+      position: relative;
+      min-width: 120px;
+      padding: 0 10px;
+
+      &:not(:first-of-type) {
+        border-left: 1px solid black;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        font-size: 0.8rem;
+        font-weight: 400;
+        text-decoration: none;
+        color: #1f4e79;
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+
+  p {
+    margin: 1rem auto;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+    width: min(70%, 800px);
+  }
+}
