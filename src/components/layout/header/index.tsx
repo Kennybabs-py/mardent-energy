@@ -6,6 +6,13 @@ import { IoMdClose } from "react-icons/io";
 
 import MardentLogo from "@/assets/mardent-energy.png";
 import "./header.scss";
+import DropDown from "@/components/ui/dropdown";
+
+const ourCompanyLinks = [
+  { link: "/", external: false, name: "About Us" },
+  { link: "/", external: false, name: "About Us" },
+  { link: "/", external: false, name: "About Us" },
+];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -21,14 +28,10 @@ export default function Header() {
       <nav className="desktop__nav">
         <ul>
           <li>
-            <a href="#" rel="noopener noreferrer">
-              Our Company
-            </a>
+            <DropDown links={ourCompanyLinks}>Our Company</DropDown>
           </li>
           <li>
-            <a href="#" rel="noopener noreferrer">
-              Mission
-            </a>
+            <DropDown links={ourCompanyLinks}>Our Operations</DropDown>
           </li>
           <li>
             <a href="#" rel="noopener noreferrer">

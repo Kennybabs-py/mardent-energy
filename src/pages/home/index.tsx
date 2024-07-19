@@ -1,10 +1,9 @@
 import { useRef, createRef } from "react";
-
+import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
 import imagedata from "@/lib/data.json";
-
 import "./home.scss";
 
 export default function Home() {
@@ -23,8 +22,8 @@ export default function Home() {
       if (!single_slide.current) return;
       // const slides =
       //   slideContainerRef?.current.querySelectorAll(".slide__item");
-      const slideDelay = 11;
-      const slideDuration = 6;
+      const slideDelay = 5;
+      const slideDuration = 1;
       const wrap = true;
       const slides = document.querySelectorAll(".slide__item");
       const progressWrap = gsap.utils.wrap(0, 1);
@@ -151,12 +150,20 @@ export default function Home() {
               <figure>
                 <img src={item.image} alt="image" />
               </figure>
+
+              <div className="text__wrapper">
+                <p>{item.text}</p>
+
+                <button type="button" className="hero__cta">
+                  {item["button-text"]} <IoArrowForwardCircleOutline />
+                </button>
+              </div>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="text__wrapper">
+      {/* <div className="text__wrapper">
         <h3>Unlocking Potential, Driving Growth</h3>
         <h2>Powering Progress with Indigenous Excellence</h2>
         <p>
@@ -164,7 +171,7 @@ export default function Home() {
           rich heritage and unparalleled expertise to deliver innovative
           upstream oil and gas solutions.
         </p>
-      </div>
+      </div> */}
     </main>
   );
 }

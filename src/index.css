@@ -22,8 +22,8 @@
 }
 
 @font-face {
-  font-family: "Work Sans";
-  src: url("/public/fonts/WorkSans-Regular.ttf") format("truetype");
+  font-family: "Neue Montreal";
+  src: url("/public/fonts/NeueMontreal-Regular.otf") format("opentype");
 }
 
 *,
