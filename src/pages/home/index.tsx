@@ -89,12 +89,16 @@ export default function Home() {
       </header>
 
       <section className="hero">
+        {/* <h3>Unlocking Potential, Driving Growth</h3>
         <h2>Powering Progress with Indigenous Excellence</h2>
-        <h3>Unlocking Potential, Driving Growth</h3>
         <p>
-          At <span>Mardent Energy Limited</span>, we are committed to harnessing
-          our rich heritage and unparalleled expertise to deliver innovative
+          At <span>Mardent Energy</span>, we are committed to harnessing our
+          rich heritage and unparalleled expertise to deliver innovative
           upstream oil and gas solutions.
+        </p> */}
+
+        <p>
+          <span>Mardent Energy</span>
         </p>
       </section>
 
