@@ -1,5 +1,6 @@
 import { useRef, createRef } from "react";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
+import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -22,6 +23,8 @@ export default function Home() {
       if (!single_slide.current) return;
       // const slides =
       //   slideContainerRef?.current.querySelectorAll(".slide__item");
+      const prevButton = document.querySelector(".previous__btn");
+      const nextButton = document.querySelector(".next__btn");
       const slideDelay = 5;
       const slideDuration = 1;
       const wrap = true;
@@ -127,6 +130,13 @@ export default function Home() {
         animateSlides(0);
         slideAnimation.progress(1);
       }
+      prevButton?.addEventListener("click", function () {
+        animateSlides(1);
+      });
+
+      nextButton?.addEventListener("click", function () {
+        animateSlides(-1);
+      });
       resize();
       window.addEventListener("resize", resize);
 
@@ -162,16 +172,14 @@ export default function Home() {
           ))}
         </div>
       </div>
-
-      {/* <div className="text__wrapper">
-        <h3>Unlocking Potential, Driving Growth</h3>
-        <h2>Powering Progress with Indigenous Excellence</h2>
-        <p>
-          At <span>Mardent Energy</span>, we are committed to harnessing our
-          rich heritage and unparalleled expertise to deliver innovative
-          upstream oil and gas solutions.
-        </p>
-      </div> */}
+      <div className="slide__navigation">
+        <button type="button" className="previous__btn">
+          <MdKeyboardArrowLeft />
+        </button>
+        <button type="button" className="next__btn">
+          <MdKeyboardArrowRight />
+        </button>
+      </div>
     </main>
   );
 }
