@@ -16,26 +16,26 @@
 
   .dropdown__container {
     position: absolute;
-    top: 180%;
+    top: 100%;
     left: 0;
-    width: 200px;
-    min-height: 200px;
-    transform: translateX(-50%);
+    min-width: 150px;
+    padding: 8px;
+    max-height: 0px;
     background-color: #fff;
     opacity: 0;
-    visibility: hidden;
-    transition: 300ms ease-in-out;
+    z-index: 0;
+    transition: opacity 100ms ease-in-out, max-height 600ms ease-in-out;
 
     &.open {
-      transform: translateX(0);
-      visibility: visible;
+      max-height: 999px;
       opacity: 1;
       z-index: 2;
+      transition: opacity 300ms ease-in-out, max-height 600ms ease-in-out;
     }
 
     a {
       display: block;
-      padding: 1rem;
+      padding: 8px 1rem;
       font-size: 1rem;
       font-weight: 500;
       text-decoration: none;

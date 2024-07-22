@@ -24,7 +24,11 @@ export default function DropDown(props: Props) {
         {children}
       </button>
 
-      <div className={`dropdown__container ${open ? "open" : ""}`}>
+      <div
+        className={`dropdown__container ${open ? "open" : ""}`}
+        onMouseEnter={() => setOpen(true)}
+        onMouseLeave={() => setOpen(false)}
+      >
         {links.map((item) => {
           {
             return item.external ? (

@@ -10,9 +10,12 @@ import DropDown from "@/components/ui/dropdown";
 
 const ourCompanyLinks = [
   { link: "/", external: false, name: "About Us" },
-  { link: "/", external: false, name: "About Us" },
-  { link: "/", external: false, name: "About Us" },
+  { link: "/", external: false, name: "Missions" },
+  { link: "/", external: false, name: "Vision" },
+  { link: "/", external: false, name: "Management" },
 ];
+
+const ourOperationsLinks = [{ link: "/", external: false, name: "Upstream" }];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -31,7 +34,7 @@ export default function Header() {
             <DropDown links={ourCompanyLinks}>Our Company</DropDown>
           </li>
           <li>
-            <DropDown links={ourCompanyLinks}>Our Operations</DropDown>
+            <DropDown links={ourOperationsLinks}>Our Operations</DropDown>
           </li>
           <li>
             <a href="#" rel="noopener noreferrer">
@@ -62,14 +65,16 @@ export default function Header() {
       <nav className={`mobile__nav ${open ? "open" : ""}`}>
         <ul>
           <li>
-            <a href="#" rel="noopener noreferrer">
+            {/* <a href="#" rel="noopener noreferrer">
               Our Company
-            </a>
+            </a> */}
+            <DropDown links={ourCompanyLinks}>Our Company</DropDown>
           </li>
           <li>
-            <a href="#" rel="noopener noreferrer">
+            {/* <a href="#" rel="noopener noreferrer">
               Mission
-            </a>
+            </a> */}
+            <DropDown links={ourOperationsLinks}>Our Operations</DropDown>
           </li>
           <li>
             <a href="#" rel="noopener noreferrer">

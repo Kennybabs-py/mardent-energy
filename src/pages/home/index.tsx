@@ -21,11 +21,10 @@ export default function Home() {
       if (!slidesRef.current) return;
       const single_slide = slidesRef.current[0];
       if (!single_slide.current) return;
-      // const slides =
-      //   slideContainerRef?.current.querySelectorAll(".slide__item");
+
       const prevButton = document.querySelector(".previous__btn");
       const nextButton = document.querySelector(".next__btn");
-      const slideDelay = 5;
+      const slideDelay = 6;
       const slideDuration = 1;
       const wrap = true;
       const slides = document.querySelectorAll(".slide__item");
@@ -75,19 +74,11 @@ export default function Home() {
         const x = Number(
           snapX(Number(gsap.getProperty(proxy, "x"))) + direction * slideWidth
         );
-        slideAnimation = gsap
-          .timeline()
-          .to(proxy, {
-            x: x,
-            duration: slideDuration,
-            onUpdate: updateProgress,
-          })
-          .from(".slide-text", {
-            y: 50,
-            opacity: 0,
-            duration: 1,
-            ease: "power3.in",
-          });
+        slideAnimation = gsap.timeline().to(proxy, {
+          x: x,
+          duration: slideDuration,
+          onUpdate: updateProgress,
+        });
       }
       function autoPlay() {
         // if (
