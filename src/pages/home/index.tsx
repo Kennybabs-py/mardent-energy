@@ -149,7 +149,7 @@ export default function Home() {
               ref={slidesRef.current[index]}
             >
               <figure>
-                <img src={item.image} alt="image" />
+                <img src={item.image} alt="image" loading="lazy" />
               </figure>
 
               <div className="text__wrapper">
