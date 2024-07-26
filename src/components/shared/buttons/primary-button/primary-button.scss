@@ -1,0 +1,40 @@
+@use "@/styles/colors" as *;
+
+button.primary__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0.8rem 1.5rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: 300ms ease-in-out;
+
+  &.primary {
+    background-color: #fff;
+    color: $color-tangaroa;
+  }
+  &.secondary {
+    background-color: $color-tangaroa;
+    color: #fff;
+  }
+
+  @media screen and (min-width: 769px) {
+    padding: 1rem 3rem;
+  }
+
+  &:hover {
+    svg {
+      transform: translateX(10px);
+    }
+  }
+
+  svg {
+    width: 25px;
+    height: 25px;
+    transition: 300ms ease-in-out;
+  }
+}

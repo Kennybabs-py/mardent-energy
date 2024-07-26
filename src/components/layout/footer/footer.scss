@@ -1,5 +1,8 @@
+@use "@/styles/colors" as *;
+
 footer {
   position: relative;
+  border-top: 0.5px solid $color-mine-shaft;
 
   div.footer__content__wrapper {
     width: 100%;
@@ -10,6 +13,8 @@ footer {
     flex-flow: row wrap;
     gap: 4rem;
     z-index: 3;
+    max-width: 1440px;
+    margin: 0 auto;
 
     @media (min-width: 769px) {
       padding: 3rem 3rem;
@@ -52,11 +57,12 @@ footer {
       a {
         display: flex;
         justify-content: flex-start;
-        align-items: flex-start;
+        align-items: center;
+        text-decoration: none;
         gap: 10px;
         font-size: 0.8rem;
         font-weight: 500;
-        color: #333;
+        color: $color-mine-shaft;
         width: min(70%, 400px);
 
         svg {
@@ -80,14 +86,14 @@ footer {
         span {
           font-size: clamp(0.9rem, 3vw, 1rem);
           font-weight: 600;
-          color: #333;
+          color: $color-mine-shaft;
         }
 
         & > div {
           position: relative;
           height: 45px;
           width: 250px;
-          border-bottom: 1px solid #333;
+          border-bottom: 1px solid $color-mine-shaft;
 
           input {
             display: block;
@@ -96,7 +102,7 @@ footer {
             padding: 0 0.4rem;
             font-size: 1rem;
             font-weight: 500;
-            color: #333;
+            color: $color-mine-shaft;
             border: none;
             outline: none;
             background-color: transparent;
@@ -126,18 +132,15 @@ footer {
         align-items: flex-start;
         justify-content: center;
         flex-wrap: wrap;
-        margin: 3rem 0 0;
+        // margin: 3rem 0 0;
 
         .links__container {
           flex-grow: 1;
           flex-shrink: 0;
-          // padding: 0 1rem;
-          // border: 0.5px solid black;
-
           & > h3 {
             font-size: 0.9rem;
             font-weight: 700;
-            color: #333;
+            color: $color-mine-shaft;
             margin: 0 0 1rem;
             padding: 0 0 0.5rem;
             width: 150px;
@@ -165,7 +168,7 @@ footer {
                 font-size: 0.8rem;
                 font-weight: 400;
                 text-decoration: none;
-                color: #1f4e79;
+                color: $color-blumine;
               }
             }
           }

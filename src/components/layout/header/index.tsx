@@ -7,6 +7,7 @@ import { IoMdClose } from "react-icons/io";
 import MardentLogo from "@/assets/mardent-energy.png";
 import "./header.scss";
 import DropDown from "@/components/ui/dropdown";
+import PrimaryButton from "@/components/shared/buttons/primary-button";
 
 const ourCompanyLinks = [
   { link: "/", external: false, name: "About Us" },
@@ -22,77 +23,73 @@ export default function Header() {
 
   return (
     <header>
-      <Link to="/">
-        <figure>
-          <img src={MardentLogo} alt="mardent energy" />
-        </figure>
-      </Link>
+      <div className="header__wrapper">
+        <Link to="/">
+          <figure>
+            <img src={MardentLogo} alt="mardent energy" />
+          </figure>
+        </Link>
 
-      <nav className="desktop__nav">
-        <ul>
-          <li>
-            <DropDown links={ourCompanyLinks}>Our Company</DropDown>
-          </li>
-          <li>
-            <DropDown links={ourOperationsLinks}>Our Operations</DropDown>
-          </li>
-          <li>
-            <a href="#" rel="noopener noreferrer">
-              Careers
-            </a>
-          </li>
-          <li>
-            <a href="#" rel="noopener noreferrer">
-              News
-            </a>
-          </li>
-          <li>
-            <a href="#footer" rel="noopener noreferrer">
-              Contact Us
-            </a>
-          </li>
-        </ul>
-      </nav>
+        <nav className="desktop__nav">
+          <ul>
+            <li>
+              <DropDown links={ourCompanyLinks}>Our Company</DropDown>
+            </li>
+            <li>
+              <DropDown links={ourOperationsLinks}>Our Operations</DropDown>
+            </li>
+            <li>
+              <a href="#" rel="noopener noreferrer">
+                Careers
+              </a>
+            </li>
+            <li>
+              <a href="#" rel="noopener noreferrer">
+                News
+              </a>
+            </li>
+            <li>
+              <Link to="/contact-us">
+                <PrimaryButton variation="secondary">Contact Us</PrimaryButton>
+              </Link>
+            </li>
+          </ul>
+        </nav>
 
-      <button
-        type="button"
-        className="mobile__nav__button"
-        onClick={() => setOpen(!open)}
-      >
-        {open ? <IoMdClose /> : <RxHamburgerMenu />}
-      </button>
+        <button
+          type="button"
+          className="mobile__nav__button"
+          onClick={() => setOpen(!open)}
+        >
+          {open ? <IoMdClose /> : <RxHamburgerMenu />}
+        </button>
 
-      <nav className={`mobile__nav ${open ? "open" : ""}`}>
-        <ul>
-          <li>
-            {/* <a href="#" rel="noopener noreferrer">
-              Our Company
-            </a> */}
-            <DropDown links={ourCompanyLinks}>Our Company</DropDown>
-          </li>
-          <li>
-            {/* <a href="#" rel="noopener noreferrer">
-              Mission
-            </a> */}
-            <DropDown links={ourOperationsLinks}>Our Operations</DropDown>
-          </li>
-          <li>
-            <a href="#" rel="noopener noreferrer">
-              Careers
-            </a>
-          </li>
-          <li>
-            <a href="#" rel="noopener noreferrer">
-              News
-            </a>
-          </li>
-          <li>
-            <a href="#footer" rel="noopener noreferrer">
-              Contact Us
-            </a>
-          </li>
-        </ul>
-      </nav>
+        <nav className={`mobile__nav ${open ? "open" : ""}`}>
+          <ul>
+            <li>
+              <DropDown links={ourCompanyLinks}>Our Company</DropDown>
+            </li>
+            <li>
+              <DropDown links={ourOperationsLinks}>Our Operations</DropDown>
+            </li>
+            <li>
+              <a href="#" rel="noopener noreferrer">
+                Careers
+              </a>
+            </li>
+            <li>
+              <a href="#" rel="noopener noreferrer">
+                News
+              </a>
+            </li>
+            <li>
+              <Link to="/contact-us" onClick={() => setOpen(false)}>
+                Contact Us
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 }

@@ -1,3 +1,5 @@
+@use "@/styles/colors" as *;
+
 .dropdown__wrapper {
   position: relative;
   display: block;
@@ -11,25 +13,33 @@
     font-size: 1rem;
     font-weight: 500;
     text-decoration: none;
-    color: #1f4e79;
+    color: $color-blumine;
   }
 
   .dropdown__container {
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: 0%;
+    right: 100%;
     min-width: 150px;
     padding: 8px;
     max-height: 0px;
     background-color: #fff;
     opacity: 0;
     z-index: 0;
+    visibility: hidden;
     transition: opacity 100ms ease-in-out, max-height 600ms ease-in-out;
+
+    @media (min-width: 769px) {
+      top: 100%;
+      left: 0;
+      right: unset;
+    }
 
     &.open {
       max-height: 999px;
       opacity: 1;
       z-index: 2;
+      visibility: visible;
       transition: opacity 300ms ease-in-out, max-height 600ms ease-in-out;
     }
 
@@ -39,7 +49,7 @@
       font-size: 1rem;
       font-weight: 500;
       text-decoration: none;
-      color: #1f4e79;
+      color: $color-blumine;
 
       &:not(:last-of-type) {
         border-bottom: 1px solid #f0f0f0;

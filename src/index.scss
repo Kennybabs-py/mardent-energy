@@ -4,7 +4,7 @@
 
 @media screen and (min-width: 1024px) {
   :root {
-    --header-height: 70px;
+    --header-height: 80px;
   }
 }
 @font-face {
@@ -41,6 +41,6 @@ body {
   min-height: 100dvh;
   margin: 0 auto;
   color: #000;
-  font-family: "Roboto", sans-serif;
+  font-family: "Neue Montreal", sans-serif;
   scroll-behavior: smooth;
 }

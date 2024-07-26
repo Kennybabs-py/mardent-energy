@@ -20,6 +20,8 @@ export default function DropDown(props: Props) {
         onClick={() => setOpen(!open)}
         onMouseEnter={() => setOpen(true)}
         onMouseLeave={() => setOpen(false)}
+        onTouchStart={() => setOpen(true)}
+        onTouchEnd={() => setOpen(false)}
       >
         {children}
       </button>

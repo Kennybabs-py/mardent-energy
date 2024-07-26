@@ -1,8 +1,4 @@
-import {
-  IoMailOutline,
-  IoLocationOutline,
-  IoArrowForwardCircleOutline,
-} from "react-icons/io5";
+import { IoMailOutline, IoLocationOutline } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
@@ -33,27 +29,15 @@ export default function Footer() {
             rel="noopener noreferrer"
           >
             <FaPhoneAlt />
-            +234 706 7366 155
+            Call: +234 706 7366 155
           </a>
           <a href="mailto:corporates@matrixenergygroup.com">
             <IoMailOutline />
-            Mail us
+            Email: corporates@matrixenergygroup.com
           </a>
         </div>
 
         <div className="email__links__wrapper">
-          <div className="email__wrapper">
-            <span>Never miss an update</span>
-
-            <div>
-              <input type="text" placeholder="Enter your email" />
-
-              <button type="button">
-                <IoArrowForwardCircleOutline />
-              </button>
-            </div>
-          </div>
-
           <div className="links__wrapper">
             <div className="links__container">
               <h3>Our Company</h3>
@@ -122,6 +106,11 @@ export default function Footer() {
                   >
                     Careers
                   </a>
+                </li>
+                <li>
+                  <Link to="/contact-us" onClick={() => window.scrollTo(0, 0)}>
+                    Contact Us
+                  </Link>
                 </li>
               </ul>
             </div>

@@ -1,11 +1,11 @@
 import { useRef, createRef } from "react";
-import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
 import imagedata from "@/lib/data.json";
 import "./home.scss";
+import PrimaryButton from "@/components/shared/buttons/primary-button";
 
 export default function Home() {
   const slidesRef = useRef(imagedata.map(() => createRef<HTMLDivElement>()));
@@ -143,9 +143,7 @@ export default function Home() {
               <div className="text__wrapper">
                 <p>{item.text}</p>
 
-                <button type="button" className="hero__cta">
-                  {item["button-text"]} <IoArrowForwardCircleOutline />
-                </button>
+                <PrimaryButton>{item["button-text"]}</PrimaryButton>
               </div>
             </div>
           ))}

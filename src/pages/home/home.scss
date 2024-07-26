@@ -1,3 +1,5 @@
+@use "@/styles/colors" as *;
+
 main.home {
   position: relative;
   width: 100%;
@@ -74,36 +76,6 @@ main.home {
       line-height: 1.5;
       letter-spacing: -0.01rem;
       text-wrap: balance;
-    }
-
-    button.hero__cta {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 0.8rem 1.5rem;
-      font-size: clamp(1rem, 2vw, 1.2rem);
-      background-color: #fff;
-      color: #1f4e79;
-      cursor: pointer;
-      text-transform: capitalize;
-      transition: 300ms ease-in-out;
-
-      @media screen and (min-width: 769px) {
-        padding: 1rem 3rem;
-      }
-
-      &:hover {
-        svg {
-          transform: translateX(10px);
-        }
-      }
-
-      svg {
-        width: 25px;
-        height: 25px;
-        transition: 300ms ease-in-out;
-      }
     }
   }
 
