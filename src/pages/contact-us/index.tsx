@@ -1,4 +1,3 @@
-import React from "react";
 import "./contact.scss";
 import PrimaryButton from "@/components/shared/buttons/primary-button";
 
