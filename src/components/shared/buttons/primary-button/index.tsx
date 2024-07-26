@@ -7,9 +7,10 @@ type Props = {
   children: ReactNode;
   type?: "button" | "submit" | "reset";
   variation?: "primary" | "secondary";
+  showArrow?: boolean;
 };
 export default function PrimaryButton(props: Props) {
-  const { children, type, variation = "primary" } = props;
+  const { children, type, variation = "primary", showArrow = false } = props;
 
   return (
     <button
@@ -20,7 +21,7 @@ export default function PrimaryButton(props: Props) {
         variation === "secondary" && "secondary"
       )}
     >
-      {children} <IoArrowForwardCircleOutline />
+      {children} {showArrow && <IoArrowForwardCircleOutline />}
     </button>
   );
 }

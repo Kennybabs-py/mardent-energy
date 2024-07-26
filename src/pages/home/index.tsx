@@ -143,7 +143,7 @@ export default function Home() {
               <div className="text__wrapper">
                 <p>{item.text}</p>
 
-                <PrimaryButton>{item["button-text"]}</PrimaryButton>
+                <PrimaryButton showArrow>{item["button-text"]}</PrimaryButton>
               </div>
             </div>
           ))}

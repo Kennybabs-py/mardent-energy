@@ -31,9 +31,9 @@ export default function Footer() {
             <FaPhoneAlt />
             Call: +234 706 7366 155
           </a>
-          <a href="mailto:corporates@matrixenergygroup.com">
+          <a href="mailto:info@mardentenergy.com">
             <IoMailOutline />
-            Email: corporates@matrixenergygroup.com
+            Email: info@mardentenergy.com
           </a>
         </div>
 
@@ -44,73 +44,16 @@ export default function Footer() {
 
               <ul>
                 <li>
-                  <a
-                    href="mailto:info@mardentenergy.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Who we are
-                  </a>
+                  <Link to="/"> Who we are</Link>
                 </li>
                 <li>
-                  <a
-                    href="mailto:info@mardentenergy.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Mission
-                  </a>
+                  <Link to="/"> Mission</Link>
                 </li>
                 <li>
-                  <a
-                    href="mailto:info@mardentenergy.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Vision
-                  </a>
+                  <Link to="/"> Vision</Link>
                 </li>
                 <li>
-                  <a
-                    href="mailto:info@mardentenergy.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Management
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="mailto:info@mardentenergy.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  {" "}
-                  <a
-                    href="mailto:info@mardentenergy.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Terms Of Use
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="tel:+234 706 7366 155"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Careers
-                  </a>
-                </li>
-                <li>
-                  <Link to="/contact-us" onClick={() => window.scrollTo(0, 0)}>
-                    Contact Us
-                  </Link>
+                  <Link to="/"> Management</Link>
                 </li>
               </ul>
             </div>
@@ -120,9 +63,28 @@ export default function Footer() {
 
               <ul>
                 <li>
-                  <a href="/" target="_blank" rel="noopener noreferrer">
-                    Upstream
-                  </a>
+                  <Link to="/"> Upstream</Link>
+                </li>
+              </ul>
+            </div>
+
+            <div className="links__container">
+              <h3>
+                <span className="invisible">Others</span>
+              </h3>
+
+              <ul>
+                <li>
+                  <Link to="/"> Privacy Policy</Link>
+                </li>
+                <li>
+                  <Link to="/"> Terms Of Use</Link>
+                </li>
+                <li>
+                  <Link to="/"> Careers</Link>
+                </li>
+                <li>
+                  <Link to="/contact-us">Contact Us</Link>
                 </li>
               </ul>
             </div>
