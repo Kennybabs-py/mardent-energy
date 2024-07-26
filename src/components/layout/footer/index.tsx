@@ -127,7 +127,7 @@ export default function Footer() {
             </div>
 
             <div className="links__container">
-              <h3>Services</h3>
+              <h3>Our Operations</h3>
 
               <ul>
                 <li>
