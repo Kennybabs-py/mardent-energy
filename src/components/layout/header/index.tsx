@@ -49,7 +49,7 @@ export default function Header() {
               </a>
             </li>
             <li>
-              <Link to="/contact-us">
+              <Link to="/contact-us" onClick={() => window.scrollTo(0, 0)}>
                 <PrimaryButton variation="secondary">Contact Us</PrimaryButton>
               </Link>
             </li>
