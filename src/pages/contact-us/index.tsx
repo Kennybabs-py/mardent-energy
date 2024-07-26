@@ -33,13 +33,13 @@ export default function ContactUs() {
         <input
           name="subject"
           type="text"
-          placeholder="Title of mail"
+          placeholder="Subject of Mail"
           required
         />
         <textarea
           name="content"
           id=""
-          placeholder="Write email content"
+          placeholder="Write Email Content"
         ></textarea>
 
         <PrimaryButton type="submit" variation="secondary">
