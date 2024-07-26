@@ -39,18 +39,6 @@ export default function Home() {
 
       const wrapX = gsap.utils.wrap(-100, (numSlides - 1) * 100);
       const timer = gsap.delayedCall(slideDelay, autoPlay);
-      // const animation = gsap
-      //   .timeline()
-      //   .to(slides, {
-      //     xPercent: "+=" + numSlides * 100,
-      //     duration: 1,
-      //     ease: "none",
-      //     paused: true,
-      //     repeat: -1,
-      //     modifiers: {
-      //       xPercent: wrapX,
-      //     },
-      //   })
 
       const animation = gsap.to(slides, {
         xPercent: "+=" + numSlides * 100,
