@@ -1,7 +1,7 @@
 import { IoMailOutline, IoLocationOutline } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 import MardentLogo from "@/assets/mardent-energy.png";
 import "./footer.scss";
