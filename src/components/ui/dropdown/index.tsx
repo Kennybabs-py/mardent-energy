@@ -5,7 +5,6 @@ import "./dropdown.scss";
 
 type Props = {
   links: Array<{ link: string; external: boolean; name: string }>;
-
   children: ReactNode;
 };
 

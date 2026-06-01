@@ -3,9 +3,10 @@ import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
-import imagedata from "@/lib/data.json";
-import "./home.scss";
 import PrimaryButton from "@/components/shared/buttons/primary-button";
+import imagedata from "@/lib/data.json";
+
+import "./home.scss";
 
 export default function Home() {
   const slidesRef = useRef(imagedata.map(() => createRef<HTMLDivElement>()));
@@ -14,8 +15,7 @@ export default function Home() {
 
   useGSAP(
     (_, contextSafe) => {
-      if (!contextSafe) return;
-      if (!sectionRef.current) return;
+      if (!contextSafe || !sectionRef.current) return;
       if (!slideContainerRef.current || slideContainerRef.current === null)
         return;
       if (!slidesRef.current) return;
@@ -55,15 +55,16 @@ export default function Home() {
       let slideAnimation = gsap.timeline().to({}, {});
       let slideWidth = 0;
       let wrapWidth = 0;
+      let cachedX = 0;
 
       function animateSlides(direction: number) {
         timer.restart(true);
         slideAnimation.kill();
-        const x = Number(
-          snapX(Number(gsap.getProperty(proxy, "x"))) + direction * slideWidth
+        cachedX = Number(
+          snapX(Number(gsap.getProperty(proxy, "x"))) + direction * slideWidth,
         );
         slideAnimation = gsap.timeline().to(proxy, {
-          x: x,
+          x: cachedX,
           duration: slideDuration,
           onUpdate: updateProgress,
         });
@@ -83,7 +84,7 @@ export default function Home() {
       }
       function updateProgress() {
         animation.progress(
-          progressWrap(Number(gsap.getProperty(proxy, "x")) / wrapWidth)
+          progressWrap(Number(gsap.getProperty(proxy, "x")) / wrapWidth),
         );
       }
 
@@ -123,7 +124,7 @@ export default function Home() {
         window.removeEventListener("resize", resize);
       };
     },
-    { scope: sectionRef }
+    { scope: sectionRef },
   );
 
   return (
@@ -137,7 +138,7 @@ export default function Home() {
               ref={slidesRef.current[index]}
             >
               <figure>
-                <img src={item.image} alt="image" loading="lazy" />
+                <img src={item.image} alt="image" loading="eager" />
               </figure>
 
               <div className="text__wrapper">
